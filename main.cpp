@@ -15,9 +15,14 @@ public:
 void balanceFn (details &detail) {
 detail.balance = 20000.00;
   if(detail.transactionType == "1"){
+        if (detail.transactionValue <= detail.balance){
       detail.balance -= detail.transactionValue;
       cout<<"your balance is:"<<detail.balance<<endl;
     }
+    else{
+      cout<<"wacha mchezo"<<" "<<detail.name<<endl;
+    }
+  }
   else if(detail.transactionType == "2"){
     detail.balance += detail.transactionValue;
     cout<<"your balance is:"<<detail.balance<<endl;
